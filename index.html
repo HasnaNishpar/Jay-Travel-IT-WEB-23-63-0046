@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jay Tours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">     
+    <script src="https://kit.fontawesome.com/f96f60532d.js" crossorigin="anonymous"></script>
+       <style>
+        body {
+        margin: 0;
+        padding: 0;
+    }
+    /* styles for medium and big screens */
+        .header{
+            background-color: black;
+            height: 50px;
+            padding: 2px;
+        }
+        .header .heading{
+            color:tomato;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            
+        }
+        .header .nav-item .home{
+            color:tomato;   
+        }
+
+        .header .nav-link{
+
+            color:white;
+            text-align: center;
+            font-size: 12px;
+            text-decoration: none;
+
+
+        }
+        
+        .card-cover{
+            padding:0px;
+        }
+        
+        .title{
+            padding-top: 15px;
+            color: tomato;
+            text-align: center;
+            font-size: 30px;
+           
+        }
+        .card-img {
+            border:none;
+            object-fit: cover;
+        }
+        .card-title{
+            text-align: center;
+            padding:10px
+            
+        }
+       
+        .description{
+            text-align: center;
+            padding-top: 5px;
+            padding-left: 200px;
+            padding-right:200px;
+        }
+        
+        .display{
+            background-color: rgb(20, 35, 54);
+            height: 200px;
+            text-align: center;
+            padding: 50px;
+            
+        
+            
+        }
+       .display .number{
+        color:tomato;
+        text-align: center;
+        font-family: "Alegreya", serif;
+        font-style: italic;
+        font-weight: lighter;
+       }
+
+       .display .data{
+        color:white;
+        text-align: center;
+        font-size: 12px;  
+       }
+      .text-card{
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.125); 
+        border-radius: 0.25rem; 
+        padding: 1rem;   
+        border-bottom-color: rgb(51, 102, 163);
+        border-bottom-width: 5px;
+        font-family: "Alegreya", serif;
+        
+      }
+      .text-card .card-link {
+    text-decoration: none; /*link decoration line removed*/
+    color: rgb(51, 102, 163);
+   }
+   .text-card .card-title{
+    color:rgb(51, 102, 163);
+    font-weight: bold;  
+   }
+   .text-card .sub-text{
+    color:rgb(87, 86, 86);
+   }
+   .btn-custom{
+    width: 100%;
+    color: rgb(58, 58, 58);
+    background-color: rgb(62, 103, 153);
+    font-weight: bold;
+   }
+   .btn-custom:hover{
+    background-color: rgb(189, 193, 196);
+    color: black;
+   }
+   .info{
+    height: 250px;
+    background-color: rgb(45, 68, 87);
+    color: white;
+    text-decoration: none;
+    padding-top: 50px;
+    text-align:justify;
+   
+   }
+   .info-text{
+    color:white
+   }
+   .info-list{
+    color:white;
+    font-size: small;
+   }
+
+   .footer{
+    background-color: black;
+    color: white;
+    height: 50px;
+    text-align: center;
+    font-family:"Alegreya", serif; 
+    padding: 15px;
+    margin: 0%;
+   }
+    .telephone{
+       padding-left: 55px;
+    }
+    .location{
+        padding-left: 55px;
+    }
+
+    /* styles for small screens */
+
+ @media(max-width: 768px){
+  
+  body{
+    margin:0%;
+    padding:0%
+  } 
+   .header{
+    height:200px;
+    width:100%;
+  }
+      .header .heading{
+        
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            padding-left:15px;
+            padding-top: 50px;
+            font-size: 30px;
+            
+            
+        }
+       
+        .description{
+            justify-content:center;
+            padding: 10px;
+        }
+           
+        
+        .display{
+            background-color: rgb(20, 35, 54);
+            height: 350px;
+            text-align: center;
+            padding: 50px;
+            
+        }
+        .info{
+            height: 400px;
+        }
+        .location{
+            text-align: center;
+        }
+        .telephone{
+            text-align: center;
+        }
+        .footer{
+            font-size:x-small;
+        }
+ }
+     </style>
+
+  </head>
+  <body>
+    <!-- header for medium screens -->
+    <div class="container-fluid header">  
+        <div class="d-flex justify-content-between">
+            <ul class="nav">
+                <li class="nav-item mt-2">
+                    <a class="heading" aria-current="page" href="#">JAY TOURS</a>
+                </li>
+                <div class="d-md-none d-block">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link home" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">SERVICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="testimonials.html">TESTIMONIALS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">PORTFOLIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html">CONTACT US</a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+
+            <!-- for small screens -->
+            <div class="d-none d-md-block">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link home" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">TESTIMONIALS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">PORTFOLIOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+           </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- cover image  -->
+    <section class="container-fluid card-cover">
+        <div class="row card">
+            <div class="col-md-12">
+                <img src="Images/main.jpg" class="card-img-top img-fluid" alt="main">
+                </div>   
+            </div>
+        
+    </section>
+<!-- Destination cards -->
+    <section class="container-fluid mt-5">  
+        <section class="row-cols-1">
+            <h1 class="title">TOP DESTINATION</h1>
+        </section>
+        
+        <section class="container-fluid mt-5 ">
+            <div class="row row-cols-1 row-cols-md-5 g-4">
+                <div class="col">
+                    <div class="card-img h-100">
+                        <h5 class="card-title">SRI LANKA</h5>
+                        <img src="Images/Top Destinations/Sri Lanka.jpg" class="card-img-top" alt="Sri Lanka" style="height: 200px;">                        
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-img h-100">
+                        <h5 class="card-title">ROME</h5>
+                        <img src="Images/Top Destinations/Rome.jpg" class="card-img-top" alt="Rome" style="height: 200px;">
+                        
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-img h-100">
+                        <h5 class="card-title">MALDIVES</h5>
+                        <img src="Images/Top Destinations/Maldives.jpg" class="card-img-top" alt="Maldives" style="height:200px">
+                        
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-img h-100">
+                        <h5 class="card-title">SWITZERLAND</h5>
+                        <img src="Images/Top Destinations/Switzerland.jpg" class="card-img-top" alt="Switzerland" style="height:200px">
+                       
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-img h-100">
+                        <h5 class="card-title">THAILAND</h5>
+                        <img src="Images/Top Destinations/Thailand.jpg" class="card-img-top" alt="Thailand" style="height:200px">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+</section>
+
+<section class="container-fluid mt-5">
+    <div class="row row-cols-1 row-cols-md-12">
+        <h1 class="title">OUR TEAM LEADS</h1>
+        <p class="description">Teamwork is the ability to work together toward a common vision.The ability to
+            direct individual accomplishments toward organizational objectives.It is the fuel that allows common people to 
+            attain uncommon results.</p>
+    </div>
+        
+    </section>
+</section>
+<!-- Team img cards -->
+<section class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card-img h-100 mb-4">
+            <img src="Images/Team Leaders/Hugo Silva.jpg" class="card-img-top" alt="Hugo Silva">
+            <div class="card-body">
+              <h5 class="card-title">Hugo Silva</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card-img h-100 mb-4 ">
+            <img src="Images/Team Leaders/Imanoli Arias.jpg" class="card-img-top" alt="Imanoli">
+            <div class="card-body">
+              <h5 class="card-title">Imanoli Arias</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card-img h-100 mb-4">
+            <img src="Images/Team Leaders/Javier Bardem.jpg" class="card-img-top" alt="Javier Bardem">
+            <div class="card-body">
+              <h5 class="card-title">Javier Bardem</h5>
+            </div>
+          </div>
+        </div> 
+      </div>
+</section>
+
+<!-- display counts  grid view-->
+
+<section class="container-fluid mt-4">
+    <div class="row display">
+        <div class="col-md-2 "></div>
+        <div class="col-md-2 ">
+            <h1 class="number"> 250k + </h1>
+            <p class="data">HAPPY CLIENTS</p>
+        </div>
+        <div class="col-md-2 ">
+            <h1 class="number"> 800 </h1>
+            <p class="data">WEEKLY RESERVATIONS</p>
+        </div>
+        <div class="col-md-2 ">
+            <h1 class="number"> 150 </h1>
+            <p class="data"> TRAVEL PARTNERS</p>   
+        </div>
+        <div class="col-md-2">
+            <h1 class="number"> 15 </h1>
+            <p class="data"> BRANCHES </p>
+        </div>
+        <div class="col-md-2"></div>
+     </div>        
+</section>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="title"> OVERHEAD FROM TRAVELERS </h1>
+        </div>
+</div>
+</section>
+<!-- text cards -reviews -->
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="text-card mb-5" >
+                <div class="card-body">
+                  <h5 class="card-title">Hotel Eucalyptus</h5>
+                  <p class="sub-text">in Greece</p>
+                  <p class="card-text">"We booked Hotel Eucalyptus through Jay after reading a handful of reveiws, 
+                    and it was easily the best decision we made </p>
+                  <a href="#" class="card-link">...more " </a>
+                  <p class="sub-text"> -Joyce from Canada</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="text-card mb-5" >
+                <div class="card-body">
+                  <h5 class="card-title">Holiday Inn Resort Batam </h5>
+                  <p class="sub-text">in indonesia</p>
+                  <p class="card-text">"Thanks Jay for letting me change room without charge and rebate the difference. 
+                    Nice staffs Agoda and Holiday Inn"</p>
+                  <a href="#" class="card-link">...more</a>
+                  <p class="sub-text"> -Andy from Singapore</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="text-card mb-5" >
+                <div class="card-body">
+                  <h5 class="card-title">Hotel Granvia Kyoto</h5>
+                  <p class="sub-text">in Japan</p>
+                  <p class="card-text">"Our family was travelling via bullet train between cities in Japan without our luggage-
+                    the location for this hotel made that </p>
+                  <a href="#" class="card-link">...more "</a>
+                  <p class="sub-text"> -Diane from the United States</p>
+                </div>
+              </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-lg-3"></div> 
+        <div class="col-12 col-lg-6"> 
+            <h1 class="title text-center">CONTACT US</h1> <!-- Centering text on all screen sizes -->
+        </div>
+        <div class="col-lg-3"></div> <!-- Empty column for medium and large screens -->
+    </div>
+</section>
+
+
+<section class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-md-3"></div> <!-- Empty column for medium screens -->
+        <div class="col-12 col-md-6"> <!-- Full width on extra small, small, and medium screens -->
+            <div class="row">
+                <div class="col-12 mb-3 mb-md-0"> <!-- Full width for first name input on all screens -->
+                    <input type="text" class="form-control" placeholder="First name" aria-label="First name" required>
+                </div>
+                <div class="col-12 col-md mb-3 mb-md-0"> <!-- Full width on small screens, half width on medium screens -->
+                    <input type="text" class="form-control" id="lastname" placeholder="Last name" aria-label="Last name" required>
+                </div>
+            </div>
+            <form id="contactForm">
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="E-mail" aria-describedby="emailHelp" required>
+                </div>
+                <div class="mb-3">
+                    <input type="tel" class="form-control" id="phonenumber" placeholder="Phone Number" aria-describedby="emailHelp" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required>
+                    <div class="invalid-feedback">Please provide a valid 10-digit phone number.</div>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Subscribe to our newsletter</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-custom">SIGN IN</button>
+            </form>
+        </div>
+        <div class="col-md-3"></div> <!-- Empty column for medium screens -->
+    </div>
+</section>
+
+
+
+
+        
+        <section class="container-fluid info mt-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link info-text"  href="#">HELP</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                          <a class="nav-link info-list mt-3" href="#">Help Center</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                          <a class="nav-link info-list" href="#">FAQs</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                          <a class="nav-link info-list" href="#">Terms of Use</a>
+                        </li>
+                      </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link info-text" href="#">ABOUT US</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                          <a class="nav-link info-list mt-3" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                          <a class="nav-link info-list" href="#">Careers</a>
+                        </li>
+                        
+                      </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link info-text"  href="#">DESTINATIONS</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                          <a class="nav-link info-list mt-3" href="#">Countries</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                          <a class="nav-link info-list" href="#">Cities</a>
+                        </li>
+                      </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul class="nav flex-column">
+                        <li class="nav-item d-none d-md-block">
+                          <a class="nav-link info-text" href="#">PARTNER WITH US</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                          <a class="nav-link info-list mt-3" href="#">Properties</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                          <a class="nav-link info-list" href="#">Affiliates</a>
+                        </li>
+                      </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link info-list" href="#"> 
+                            <p class="telephone mb-1"> <i class="fa-solid fa-phone fa-shake" style="color: #ca6b12;"></i> +94 112 875 965 </p>
+                            <p class="telephone mb-1"> +94 115 879 568 </p></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link info-list" href="#"> 
+                                <p class="location mb-1"> <i class="fa-solid fa-location-dot fa-beat" style="color: #ca6b12;"></i> No 056,</p>
+                                <p class="location mb-1">   Havlock Town,</p>
+                                <p class="location mb-1">   Colombo 05,</p>
+                                <p class="location mb-1">   Srilanka.</p>
+                            </a>
+                        </li>
+                        
+                      </ul>
+                </div>
+
+            </div>
+        </section>
+        <footer class="container-fluid footer">
+            <div class="row">
+                <div class="col">
+                    <div><p class="footer-text">Copyright &copy;2020 - SLIIT WEB DEVELOPMENT- All rights reserved </p></div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // JavaScript for form validation
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('validationForm');
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        });
+    });
+        </script>
+
+
+    
+
+        
+        
+                
+
+
+
+
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
